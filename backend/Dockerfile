@@ -1,13 +1,5 @@
-FROM node:18
+FROM php:8.2-apache
 
-WORKDIR /app
+COPY api/ /var/www/html/
 
-COPY api/package*.json ./
-
-RUN npm install
-
-COPY api/ .
-
-EXPOSE 5000
-
-CMD ["npm", "start"]
+EXPOSE 80

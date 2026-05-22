@@ -1,11 +1,10 @@
-pipeline {
     agent any
 
     stages {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/nenufalthugadini-byte-1788/3-tier-application.git'
+                git branch: 'main', url: 'https://github.com/nenufalthugadini-byte-1788/3-tier-application.git'
             }
         }
 
